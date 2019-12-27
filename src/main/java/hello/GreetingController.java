@@ -1,6 +1,7 @@
 package hello;
 
 import java.util.ArrayList;
+import org.springframework.ui.Model;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,13 +13,9 @@ public class GreetingController {
   private static final String template = "Hello, %s!";
   private final AtomicLong counter = new AtomicLong();
 
-  @RequestMapping(value = "/")
-	public String index() {
-		return "index";
-	}
-
   @RequestMapping("/greetings")
-  public ArrayList<Greeting> greeting() {
+  public ArrayList<Greeting> greeting(Model model) {
+    model.addAttribute("greetings", Application.arrGreetings);
     return Application.arrGreetings;
   }
 
