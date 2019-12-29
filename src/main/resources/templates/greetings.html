@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>All Greetings:</h1>
-    <p th:text="${greetings}" />
+    <ul th:each="greetings : ${greetings}">
+        <li th:text="${greetings.content}"></li>
+    </ul>
 </body>
 </html>
