@@ -1,8 +1,21 @@
 body {
     background-color: lightblue;
     padding: 10px;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: navy;
-  }
+}
+
+.neesh p {
+    line-height: 1px;
+    display: inline-block;
+}
+
+.neesh div {
+    display: inline-block;
+}
+
+.greeting {
+    padding-left: 10px;
+}

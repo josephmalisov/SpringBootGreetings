@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
 
+  public static int counter = 0;
+
   public static ArrayList<Greeting> arrGreetings = new ArrayList<Greeting>();
   public static void main(String[] args) {
     
